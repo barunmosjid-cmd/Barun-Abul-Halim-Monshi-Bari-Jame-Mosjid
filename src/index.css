@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-natural-bg: #F4F1EA;
+  --color-natural-surface: #FFFFFF;
+  --color-natural-surface-alt: #FBF9F6;
+  --color-natural-border: #E0DCCF;
+  --color-natural-text: #3D3D3D;
+  --color-natural-muted: #8A8A8A;
+  --color-natural-pine: #2D4A3E;
+  --color-natural-pine-hover: #3D5E50;
+  --color-natural-moss: #5A5A40;
+  --color-natural-clay: #9A7E6F;
+  --color-natural-lime: #CFDB95;
+  --color-natural-light: #E8EDDF;
+}
+
+@layer base {
+  body {
+    background-color: #F4F1EA;
+    color: #3D3D3D;
+    font-family: 'Hind Siliguri', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-serif-bn {
+    font-family: 'Noto Serif Bengali', 'Hind Siliguri', serif;
+  }
+}
+
+/* Custom Natural Tones utility helpers */
+.bg-natural-bg { background-color: #F4F1EA; }
+.bg-natural-surface { background-color: #FFFFFF; }
+.bg-natural-surface-alt { background-color: #FBF9F6; }
+.bg-natural-pine { background-color: #2D4A3E; }
+.bg-natural-pine-hover:hover { background-color: #3D5E50; }
+.bg-natural-lime { background-color: #CFDB95; }
+.bg-natural-moss { background-color: #5A5A40; }
+.bg-natural-clay { background-color: #9A7E6F; }
+
+.text-natural-pine { color: #2D4A3E; }
+.text-natural-moss { color: #5A5A40; }
+.text-natural-clay { color: #9A7E6F; }
+.text-natural-muted { color: #8A8A8A; }
+.text-natural-light { color: #E8EDDF; }
+.text-natural-main { color: #3D3D3D; }
+
+.border-natural-border { border-color: #E0DCCF; }
+.border-natural-pine { border-color: #2D4A3E; }
+.divide-natural-bg > :not([hidden]) ~ :not([hidden]) { border-color: #F4F1EA; }
+
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .shadow-sm, .shadow, .shadow-md, .shadow-lg {
+    box-shadow: none !important;
+  }
+}
+
